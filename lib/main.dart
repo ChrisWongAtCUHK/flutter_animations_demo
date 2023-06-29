@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations_demo/views/animatedcontainer_demo.dart';
 import 'package:flutter_animations_demo/views/home.dart';
 import 'package:flutter_animations_demo/views/rocket.dart';
 import 'package:flutter_animations_demo/views/error_shake.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/rocket': (context) => const RocketScreen(),
         '/error_shake': (context) => const ErrorShakeScreen(),
+        '/animatedcontainer_demo': (context) => const AnimatedContainerScreen(),
       },
     );
   }
