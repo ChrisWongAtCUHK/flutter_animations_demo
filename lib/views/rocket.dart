@@ -20,6 +20,10 @@ class _RocketScreenState extends State<RocketScreen>
           curve: Curves.easeOut,
           reverseCurve: Curves.easeIn));
 
+  late final Animation _colorAnimation =
+      ColorTween(begin: Colors.green, end: Colors.amber)
+          .animate(_animationController);
+
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
@@ -42,7 +46,7 @@ class _RocketScreenState extends State<RocketScreen>
                     _textAnimation.value.toString(),
                     style: theme.textTheme.headlineLarge?.copyWith(
                       fontSize: 70,
-                      color: Colors.green,
+                      color: _colorAnimation.value,
                     ),
                     textAlign: TextAlign.center,
                   );
