@@ -24,6 +24,11 @@ class _RocketScreenState extends State<RocketScreen>
       ColorTween(begin: Colors.green, end: Colors.amber)
           .animate(_animationController);
 
+  late final Animation _sizeAnimation = Tween(
+    begin: 200.0,
+    end: 300.0,
+  ).animate(_animationController);
+
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
@@ -42,13 +47,26 @@ class _RocketScreenState extends State<RocketScreen>
             AnimatedBuilder(
                 animation: _animationController,
                 builder: (BuildContext context, _) {
-                  return Text(
-                    _textAnimation.value.toString(),
-                    style: theme.textTheme.headlineLarge?.copyWith(
-                      fontSize: 70,
-                      color: _colorAnimation.value,
+                  return Center(
+                    child: Container(
+                      color: Colors.red,
+                      height: _sizeAnimation.value,
+                      width: _sizeAnimation.value,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            _textAnimation.value.toString(),
+                            style: theme.textTheme.headlineLarge?.copyWith(
+                              fontSize: 70,
+                              color: _colorAnimation.value,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   );
                 }),
             const Text(
