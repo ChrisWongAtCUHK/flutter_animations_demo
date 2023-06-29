@@ -3,6 +3,7 @@ import 'package:flutter_animations_demo/views/animatedcontainer_demo.dart';
 import 'package:flutter_animations_demo/views/home.dart';
 import 'package:flutter_animations_demo/views/rocket.dart';
 import 'package:flutter_animations_demo/views/error_shake.dart';
+import 'package:flutter_animations_demo/views/hero_animation.dart';
 
 void main() => runApp(const MyApp());
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/rocket': (context) => const RocketScreen(),
         '/error_shake': (context) => const ErrorShakeScreen(),
         '/animatedcontainer_demo': (context) => const AnimatedContainerScreen(),
+        '/hero_animation': (context) => const HeroAnimationScreen(),
       },
     );
   }

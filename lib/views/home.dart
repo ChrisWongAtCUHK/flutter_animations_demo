@@ -23,6 +23,15 @@ class HomeScreen extends StatelessWidget {
               onTap: () =>
                   Navigator.pushNamed(context, '/animatedcontainer_demo'),
             ),
+            ListTile(
+              trailing: const Hero(
+                // this must be equal to the other tag
+                tag: 'tag-1',
+                child: Icon(Icons.person),
+              ),
+              onTap: () => Navigator.pushNamed(context, '/hero_animation'),
+              title: const Text('Go to Hero Animation'),
+            ),
           ],
         ),
       ),
