@@ -166,6 +166,8 @@ class ShakeWidgetState extends AnimationControllerState<ShakeWidget> {
             sin(widget.shakeCount * 2 * pi * animationController.value);
         return Transform.translate(
           offset: Offset(sineValue * widget.shakeOffset, 0),
+          // try to shake vertically, instead of horizontally
+          // offset: Offset(0, sineValue * widget.shakeOffset),
           child: child,
         );
       },
