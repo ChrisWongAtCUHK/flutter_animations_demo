@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations_demo/views/home.dart';
 import 'package:flutter_animations_demo/views/rocket.dart';
+import 'package:flutter_animations_demo/views/error_shake.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/rocket': (context) => const RocketScreen(),
+        '/error_shake': (context) => const ErrorShakeScreen(),
       },
     );
   }

@@ -14,6 +14,10 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Rocket Demo'),
               onTap: () => Navigator.pushNamed(context, '/rocket'),
             ),
+            ListTile(
+              title: const Text('Error Shake Effect'),
+              onTap: () => Navigator.pushNamed(context, '/error_shake'),
+            ),
           ],
         ),
       ),
