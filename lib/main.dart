@@ -5,6 +5,7 @@ import 'package:flutter_animations_demo/views/rocket.dart';
 import 'package:flutter_animations_demo/views/error_shake.dart';
 import 'package:flutter_animations_demo/views/hero_animation.dart';
 import 'package:flutter_animations_demo/views/basic_hero_animation.dart';
+import 'package:flutter_animations_demo/views/radial_hero_animation.dart';
 
 void main() => runApp(const MyApp());
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/animatedcontainer_demo': (context) => const AnimatedContainerScreen(),
         '/hero_animation': (context) => const HeroAnimationScreen(),
         '/basic_hero_animation': (context) => const BasicHeroAnimationScreen(),
+        '/radial_hero_animation': (context) => const RadialExpansionDemo(),
       },
     );
   }

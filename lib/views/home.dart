@@ -37,6 +37,11 @@ class HomeScreen extends StatelessWidget {
               onTap: () =>
                   Navigator.pushNamed(context, '/basic_hero_animation'),
             ),
+            ListTile(
+              title: const Text('Radial hero animations'),
+              onTap: () =>
+                  Navigator.pushNamed(context, '/radial_hero_animation'),
+            ),
           ],
         ),
       ),
